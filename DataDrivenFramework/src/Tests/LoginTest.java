@@ -20,12 +20,14 @@ public class LoginTest {
 		
 	}
 	@Test
-	public void validLogin(){
-		
+	public void loginLogout(){
+
 		System.out.println( System.getProperty("user.dir"));
+		LoginPage loginPage;
 		Navigate navigate = new Navigate(driver, baseURL);
-		LoginPage loginPage = (LoginPage) navigate.to(Navigate.LOGIN_PAGE);
-		loginPage.login("testuser33", "password123");
+		loginPage = (LoginPage) navigate.to(Navigate.LOGIN_PAGE);
+		FlightFinderPage flightFinderPage = (FlightFinderPage)loginPage.login("testuser33", "password123");
+		loginPage = (LoginPage)flightFinderPage.Logout();
 		
 		
 	}

@@ -31,6 +31,8 @@ public class CommonFunc {
 			webElement = driver.findElement(By.name(identifierTxt));
 		}else if (indentifierType.equalsIgnoreCase("id")) {
 			 webElement = driver.findElement(By.id(identifierTxt));
+		}else if (indentifierType.equalsIgnoreCase("linktext")){
+			webElement = driver.findElement(By.linkText(identifierTxt));
 		}
 		
 		return webElement;
