@@ -31,9 +31,9 @@ public class LoginPage {
 	
 		if(loginPage == null){
 			return new LoginPage(driver);
-		}else{
-			return loginPage;
 		}
+	
+		return loginPage;
 	}
 	
 	private LoginPage(WebDriver driver) {

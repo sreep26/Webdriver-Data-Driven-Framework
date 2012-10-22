@@ -25,9 +25,10 @@ public class FlightFinderPage {
 	public static FlightFinderPage getFlightFinderPage(WebDriver driver){
 		if(flightFinderPage == null){
 			return new FlightFinderPage(driver);
-		}else{
-			return flightFinderPage;
 		}
+		
+		return flightFinderPage;
+		
 	}
 	
 	private FlightFinderPage(WebDriver driver){ 
